@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+  <head>
+  </head>
+  <body>
+    <h1>Calculator</h1>
+
+    <div>
+      Square: <input type="text" id="square">
+      <button id="calculateSquare"></button>
+    </div>
+
+    <div>
+      Half: <input type="text" id="half">
+      <button id="calculateHalf"></button>
+    </div>
+
+    <div>
+      Number: <input type="text" id="number">
+    </div>
+    <div>
+      Percent: <input type="text" id="percent">
+      <button id="calculatePercent"></button>
+    </div>
+    <div id="squareOutput"></div>
+    <div id="halfOutput"></div>
+    <div id="percentOutput"></div>
+
+    <script>
+      document.getElementById('calculateHalf')
+      .addEventListener('click', function() {
+        var halfOutputNumber = document.getElementById('half').value / 2
+        document.getElementById('halfOutput').innerText = 'Halved: ' + halfOutputNumber;
+      });
+
+      document.getElementById('calculateSquare')
+      .addEventListener('click', function() {
+        var squareOutputNumber = document.getElementById('square').value * document.getElementById('square').value;
+        document.getElementById('squareOutput').innerText = 'Squared: ' + squareOutputNumber;
+      });
+
+      document.getElementById('calculatePercent'
+      .addEventListener('click', function() {
+        var percentOutputNumber = document.getElementById('number').value * document.getElementById('percent').value * .01;
+        document.getElementById('percentOutput').innerText = 'Percent: ' + percentOutputNumber;
+      });
+    </script>
+  </body>
+</html>
